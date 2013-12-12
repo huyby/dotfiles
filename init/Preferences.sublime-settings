@@ -1,9 +1,16 @@
 {
-	"color_scheme": "Packages/Color Scheme - Default/Blackboard.tmTheme",
-	"default_line_ending": "unix",
+	"close_windows_when_empty": true,
+	"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
 	"detect_indentation": false,
-	"draw_white_space": "all",
-	"ensure_newline_at_eof_on_save": false,
+	"default_line_ending": "unix",
+	"folder_exclude_patterns":
+	[
+		".svn",
+		".git",
+		".hg",
+		"CVS",
+		".sass-cache"
+	],
 	"file_exclude_patterns":
 	[
 		".DS_Store",
@@ -12,25 +19,25 @@
 		"._*",
 		"Thumbs.db",
 		".Spotlight-V100",
-		".Trashes"
+		".Trashes",
+		"*.sublime-workspace",
+		".DS_Store",
+		"Icomoon Session.json",
+		".zfproject.xml"
 	],
-	"folder_exclude_patterns":
-	[
-		".git",
-		"node_modules"
-	],
-	"font_size": 15.0,
+	"font_size": 12.0,
+	"highlight_line": true,
 	"highlight_modified_tabs": true,
-	"hot_exit": false,
-	"line_padding_bottom": 6,
-	"matchBracketsAngle": true,
-	"remember_open_files": false,
-	"rulers":
+	"ignored_packages":
 	[
-		80
+		"Git",
+		"Xdebug"
 	],
-	"tab_size": 2,
-	"translate_tabs_to_spaces": false,
+	"open_files_in_new_window": false,
+	"preview_on_click": true,
+	"scroll_past_end": true,
+	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
-	"word_wrap": true
+	"vintage_start_in_command_mode": true,
+	"word_wrap": false
 }

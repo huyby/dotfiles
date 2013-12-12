@@ -25,9 +25,11 @@ installcask vlc
 installcask all2mp3
 installcask transmit
 #installcask utorrent
-#installcask transmission
+installcask transmission
 installcask libreoffice
 installcask mysql-workbench
 #installcask totalfinder
 #installcask totalterminal
 #installcask diffmerge
+installcask dash
+#installcask sizeup
