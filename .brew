@@ -20,6 +20,7 @@ brew install wget --enable-iri
 # Install curl
 brew install curl
 
+brew tap josegonzalez/homebrew-php
 # Install other useful binaries
 brew install imagemagick
 brew install ffmpeg
