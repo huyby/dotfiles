@@ -33,3 +33,4 @@ installcask mysql-workbench
 #installcask diffmerge
 installcask dash
 #installcask sizeup
+installcask qlstephen
