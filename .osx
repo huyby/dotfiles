@@ -623,6 +623,13 @@ defaults write com.google.Chrome.canary ExtensionInstallSources -array "https://
 cp -r init/Preferences.sublime-settings ~/Library/Application\ Support/Sublime\ Text*/Packages/User/Preferences.sublime-settings 2> /dev/null
 
 ###############################################################################
+# Quicklook settings                                                          #
+###############################################################################
+
+# Add extended blacklist for Stephen Quicklook plugin
+cp -r init/QLStephenExtensionsBlackList.plist /opt/homebrew-cask/Caskroom/qlstephen/latest/QLStephen.qlgenerator/Contents/Resources/QLStephenExtensionsBlackList.plist 2> /dev/null
+
+###############################################################################
 # Transmission.app                                                            #
 ###############################################################################
 
