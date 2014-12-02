@@ -622,6 +622,9 @@ defaults write com.google.Chrome.canary ExtensionInstallSources -array "https://
 # Install Sublime Text settings
 cp -r init/Preferences.sublime-settings ~/Library/Application\ Support/Sublime\ Text*/Packages/User/Preferences.sublime-settings 2> /dev/null
 
+# Enable key repeat in Apple Lion for Sublime Text in Vim mode
+defaults write com.sublimetext.2 ApplePressAndHoldEnabled -bool false
+
 ###############################################################################
 # Quicklook settings                                                          #
 ###############################################################################
