@@ -7,9 +7,6 @@ export PATH="/usr/local/mysql/bin:$PATH"
 # Tools globally installed with composer, like phpunit, phpmd
 export PATH="$HOME/.composer/vendor/bin/:$PATH"
 
-# Set application environment variable to "development"
-export APPLICATION_ENV=development
-
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
 # * ~/.extra can be used for other settings you don’t want to commit.
