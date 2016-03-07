@@ -1,6 +1,7 @@
-" Set default colorscheme to desert
+" Use the Solarized Dark theme
 set background=dark
-colorscheme desert
+colorscheme solarized
+let g:solarized_termtrans=1
 
 " Make Vim more useful
 set nocompatible
@@ -100,10 +101,10 @@ noremap <leader>W :w !sudo tee % > /dev/null<CR>
 
 " Automatic commands
 if has("autocmd")
-    " Enable file type detection
-    filetype on
-    " Treat .json files as .js
-    autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
-    " Treat .md files as Markdown
-    autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
+	" Enable file type detection
+	filetype on
+	" Treat .json files as .js
+	autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
+	" Treat .md files as Markdown
+	autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
 endif
