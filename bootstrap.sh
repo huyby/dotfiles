@@ -20,3 +20,4 @@ else
 	fi;
 fi;
 unset doIt;
+cask_args appdir: '/Applications'
