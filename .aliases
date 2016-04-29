@@ -6,11 +6,11 @@ alias .....="cd ../../../.."
 alias -- -="cd -"
 
 # Shortcuts
-alias d="cd ~/Documents/Dropbox"
+alias d="cd ~/Documents"
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
 alias p="cd ~/Projects"
-alias s="cd ~/Sites"
+#alias s="cd ~/Sites"
 alias g="git"
 alias h="history"
 alias j="jobs"
@@ -147,3 +147,11 @@ alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resource
 
 # Reload the shell (i.e. invoke as a login shell)
 alias reload="exec $SHELL -l"
+
+# NPM
+alias ni='npm install'
+alias nis='npm install --save'
+alias nisd='npm install --save-dev'
+alias nig='npm install -g'
+alias nu='npm update'
+alias nug='npm update -g'
