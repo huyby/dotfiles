@@ -68,6 +68,9 @@ brew install vagrant-completion
 brew install composer
 brew install ansible
 brew install terraform
+# Tmux install with reattach fix
+brew install tmux
+brew install reattach-to-user-namespace
 
 # Remove outdated versions from the cellar.
 brew cleanup
