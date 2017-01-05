@@ -258,3 +258,11 @@ function man() {
         LESS_TERMCAP_us=$'\e[1;32m' \
             man "$@"
 }
+
+# Export docker machine environment variables
+function dmeval() {
+	local machinename="${1:-docker-default-local}";
+    echo ${machinename} $(docker-machine status ${machinename});
+    echo "Doing eval \$(docker-machine env ${machinename})";
+    eval $(docker-machine env ${machinename});
+}
