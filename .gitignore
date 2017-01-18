@@ -13,3 +13,11 @@ Thumbs.db
 .Spotlight-V100
 .Trashes
 .extra
+
+# VM data
+.vagrant
+
+# IDE
+.idea
+*.sublime-project
+*.sublime-workspace
