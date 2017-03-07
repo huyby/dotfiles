@@ -48,6 +48,7 @@ brew install dark-mode
 #brew install exiv2
 brew install git
 brew install git-lfs
+brew install git-flow
 brew install imagemagick --with-webp
 brew install lynx
 brew install p7zip
@@ -71,6 +72,8 @@ brew install terraform
 # Tmux install with reattach fix
 brew install tmux
 brew install reattach-to-user-namespace
+brew install rsync
+brew install unison
 
 # Remove outdated versions from the cellar.
 brew cleanup
