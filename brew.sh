@@ -73,6 +73,7 @@ brew install tmux
 brew install reattach-to-user-namespace
 brew install rsync
 brew install unison
+brew install shellcheck
 
 # Remove outdated versions from the cellar.
 brew cleanup
