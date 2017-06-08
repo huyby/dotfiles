@@ -79,6 +79,15 @@
     # Merge no fast forward
     mnoff = merge --no-ff
 
+    # Better git blame
+    bl = log -p -M --follow --stat
+
+    # Stash all, untracked files included
+    stash-all = stash save --include-untracked
+
+    # Remove local branches that are deleted on remote
+    prune = fetch --prune
+
 [apply]
 
 	# Detect whitespace errors when applying a patch
@@ -146,6 +155,10 @@
 [merge]
 	# Include summaries of merged commits in newly created merge commit messages
 	log = true
+
+    # Show error when a merge is not fast-forward
+    # https://blog.scottnonnenberg.com/better-git-configuration/
+    ff = only
 
 [push]
 
