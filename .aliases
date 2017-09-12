@@ -171,5 +171,10 @@ alias doeval='eval $(docker-machine env docker-default-local)'
 # Terraform
 alias tf='terraform'
 alias tfa='terraform apply'
-alias tfe='terraform env'
+alias tfw='terraform workspace'
 alias tfp='terraform plan'
+
+# Ansible
+alias ap='ansible-playbook'
+alias av='ansible-vault'
+alias ag='ansible-galaxy'
