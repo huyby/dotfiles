@@ -3,6 +3,6 @@
         "squizlabs/php_codesniffer": "*",
         "phpmd/phpmd": "^2.4",
         "drupal/coder": "^8.2",
-        "hirak/prestissimo": "^0.1.18"
+        "hirak/prestissimo": "^0.3"
     }
 }
