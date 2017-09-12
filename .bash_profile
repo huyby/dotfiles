@@ -2,10 +2,10 @@
 export PATH="$HOME/bin:$PATH"
 # Make sure local bin are available
 export PATH="/usr/local/bin:$PATH"
-# Add MySQL tools like mysqldump
-export PATH="/usr/local/mysql/bin:$PATH"
+# Make sure local sbin are available
+export PATH="/usr/local/sbin:$PATH"
 # Tools globally installed with composer, like phpunit, phpmd
-export PATH="$HOME/.composer/vendor/bin/:$PATH"
+export PATH="$HOME/.composer/vendor/bin:$PATH"
 
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
@@ -63,5 +63,14 @@ if which brew > /dev/null; then
     done
 fi
 
+# Load nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
+
 # Keep permanent history in logs
 export PROMPT_COMMAND='if [ "$(id -u)" -ne 0 ]; then echo "$(date "+%Y-%m-%d.%H:%M:%S") $(pwd) $(history 1)" >> ~/.logs/bash-history-$(date "+%Y-%m-%d").log; fi'
+
+# Tmuxp completion
+if which tmuxp > /dev/null; then
+  eval "$(_TMUXP_COMPLETE=source tmuxp)"
+fi
