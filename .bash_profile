@@ -53,9 +53,6 @@ complete -W "NSGlobalDomain" defaults;
 # Add `killall` tab completion for common apps
 complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes SystemUIServer Terminal Twitter" killall
 
-# Add sudo tab completion
-complete -cf sudo
-
 # If possible, add tab completion for many more commands
 if which brew > /dev/null; then
     for file in $(brew --prefix)/etc/bash_completion.d/*; do
