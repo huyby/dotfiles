@@ -164,9 +164,7 @@ alias suben='subliminal download -l en'
 #alias borg='docker run juhofriman/borg'
 
 # Docker
-alias dm='docker-machine'
 alias dc='docker-compose'
-alias doeval='eval $(docker-machine env docker-default-local)'
 
 # Terraform
 alias tf='terraform'
@@ -181,3 +179,13 @@ alias ag='ansible-galaxy'
 
 # SSH
 alias sshf='ssh -F ssh.cfg'
+
+# Git cleanup branches
+alias gcbr='git branch --merged | egrep -v "(^\*|master|develop|release)" | xargs git branch -d {}'
+
+# Tmuxp load session
+alias tmxls="tmuxp load ."
+
+# Shorthand starting PHP Docker containers with Xdebug enabled/disabled
+alias dcxdebug="sed -i 's/PHP_XDEBUG_ENABLED=0/PHP_XDEBUG_ENABLED=1/' .env && dc up -d app"
+alias dcxdebugstop="sed -i 's/PHP_XDEBUG_ENABLED=1/PHP_XDEBUG_ENABLED=0/' .env && dc up -d app"

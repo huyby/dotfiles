@@ -21,6 +21,14 @@ Thumbs.db
 .idea
 *.sublime-project
 *.sublime-workspace
+_ide_helper.php
+.phpstorm.meta.php
 
 # Tmuxp
-*tmuxp.yml
+*tmuxp.yaml
+
+# Node
+node_modules
+
+# Tests
+.phpunit.result.cache
