@@ -6,6 +6,8 @@ export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 # Tools globally installed with composer, like phpunit, phpmd
 export PATH="$HOME/.composer/vendor/bin:$PATH"
+# Ruby installed by Brew
+#export PATH="/usr/local/opt/ruby/bin:$PATH"
 
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
@@ -43,6 +45,12 @@ if type _git &> /dev/null && [ -f /usr/local/etc/bash_completion.d/git-completio
 	complete -o default -o nospace -F _git g;
 fi;
 
+# Enable tab completion for `dc` by marking it as an alias for `docker-compose`
+if type _docker-compose &> /dev/null && [ -f /usr/local/etc/bash_completion.d/docker-compose ]; then
+	complete -o default -o nospace -F _docker-compose dc;
+fi;
+
+
 # Add tab completion for SSH hostnames based on ~/.ssh/config, ignoring wildcards
 [ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2- | tr ' ' '\n')" scp sftp ssh;
 
@@ -53,16 +61,15 @@ complete -W "NSGlobalDomain" defaults;
 # Add `killall` tab completion for common apps
 complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes SystemUIServer Terminal Twitter" killall
 
+# Add sudo tab completion
+complete -cf sudo
+
 # If possible, add tab completion for many more commands
 if which brew > /dev/null; then
     for file in $(brew --prefix)/etc/bash_completion.d/*; do
         [ -r "$file" ] && [ -f "$file" ] && source "$file"
     done
 fi
-
-# Load nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
 
 # Keep permanent history in logs
 export PROMPT_COMMAND='if [ "$(id -u)" -ne 0 ]; then echo "$(date "+%Y-%m-%d.%H:%M:%S") $(pwd) $(history 1)" >> ~/.logs/bash-history-$(date "+%Y-%m-%d").log; fi'
@@ -71,3 +78,11 @@ export PROMPT_COMMAND='if [ "$(id -u)" -ne 0 ]; then echo "$(date "+%Y-%m-%d.%H:
 if which tmuxp > /dev/null; then
   eval "$(_TMUXP_COMPLETE=source tmuxp)"
 fi
+
+# Use non-outdated openssl binaries.
+export PATH="/usr/local/opt/openssl/bin:$PATH"
+
+# Load NVM
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+#[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
