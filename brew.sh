@@ -37,25 +37,17 @@ brew install vim --with-override-system-vi
 brew install grep
 brew install openssh
 brew install screen
-brew install homebrew/php/php70 --with-gmp
+brew install php
+brew install gmp
 
 # Install other useful binaries.
 brew install ack
-brew install dark-mode
 brew install git
-brew install git-lfs
-brew install git-flow
-brew install imagemagick --with-webp
 brew install rename
 brew install speedtest_cli
 brew install ssh-copy-id
-brew install testssl
 brew install tree
-brew install webkit2png
-brew install fzf
 brew install htop
-brew install php-cs-fixer
-brew install vagrant-completion
 brew install composer
 brew install ansible
 brew install terraform
@@ -63,7 +55,6 @@ brew install terraform
 brew install tmux
 brew install reattach-to-user-namespace
 brew install rsync
-brew install unison
 brew install shellcheck
 
 # Remove outdated versions from the cellar.
