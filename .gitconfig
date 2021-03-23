@@ -12,6 +12,9 @@
 	# `git di $number` shows the diff between the state `$number` revisions ago and the current state
 	di = !"d() { git diff --patch-with-stat HEAD~$1; }; git diff-index --quiet HEAD -- || clear; d"
 
+    # Show diff staged
+    ds = diff --staged
+
 	# Pull in remote changes for the current repository and all its submodules
 	p = !"git pull; git submodule foreach git pull origin master"
 
@@ -87,6 +90,9 @@
 
     # Remove local branches that are deleted on remote
     prune = fetch --prune
+
+    # Show overview of branches and when they were last changed
+    wip = for-each-ref --sort='authordate:iso8601' --format=' %(color:green)%(authordate:relative)%09%(color:white)%(refname:short)' refs/heads
 
 [apply]
 
@@ -201,3 +207,7 @@
 
 [rebase]
 	autoStash = true
+[branch]
+	autosetuprebase = always
+[pull]
+	rebase = true
