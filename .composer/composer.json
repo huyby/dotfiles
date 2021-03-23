@@ -2,7 +2,7 @@
     "require": {
         "squizlabs/php_codesniffer": "*",
         "phpmd/phpmd": "^2.4",
-        "drupal/coder": "^8.2",
-        "hirak/prestissimo": "^0.3"
+        "phpunit/phpunit": "^6.4",
+        "friendsofphp/php-cs-fixer": "^2.15"
     }
 }
