@@ -47,7 +47,7 @@
 		"CVS",
 		".sass-cache"
 	],
-	"font_size": 12.5,
+	"font_size": 12.0,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
 	"ignored_packages":
@@ -69,11 +69,11 @@
 	"open_files_in_new_window": false,
 	"preview_on_click": true,
 	"scroll_past_end": true,
-	"sidebar_font_small": false,
+	"sidebar_font_small": true,
 	"sidebar_medium": true,
 	"theme": "Cobalt2.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
 	"vintage_start_in_command_mode": true,
-	"word_wrap": true
+	"word_wrap": false
 }

@@ -163,8 +163,16 @@ alias suben='subliminal download -l en'
 # Borg
 #alias borg='docker run juhofriman/borg'
 
-# Docker
+# Docker & Docker-Sync
+alias dm='docker-machine'
 alias dc='docker-compose'
+alias ds='docker-sync'
+alias dss='docker-sync start'
+alias dssf='docker-sync start --foreground'
+alias dsc='docker-sync clean'
+alias dssup='docker-sync start && docker-compose up -d'
+alias dssdown='docker-compose down && docker-sync stop'
+alias dscdown='docker-compose down && docker-sync clean'
 
 # Terraform
 alias tf='terraform'
@@ -187,5 +195,14 @@ alias gcbr='git branch --merged | egrep -v "(^\*|master|develop|release)" | xarg
 alias tmxls="tmuxp load ."
 
 # Shorthand starting PHP Docker containers with Xdebug enabled/disabled
-alias dcxdebug="sed -i 's/PHP_XDEBUG_ENABLED=0/PHP_XDEBUG_ENABLED=1/' .env && dc up -d app"
-alias dcxdebugstop="sed -i 's/PHP_XDEBUG_ENABLED=1/PHP_XDEBUG_ENABLED=0/' .env && dc up -d app"
+alias dcxdebug="cd ./dock && sed -i 's/PHP_XDEBUG_ENABLED=0/PHP_XDEBUG_ENABLED=1/' .env && dc up -d app && cd .."
+alias dcxdebugstop="cd ./dock && sed -i 's/PHP_XDEBUG_ENABLED=1/PHP_XDEBUG_ENABLED=0/' .env && dc up -d app && cd .."
+
+# Composer through project docker container
+alias dcomp="./dock/bin/composer"
+
+# Artisan through project docker container
+alias dart="./dock/bin/artisan"
+
+# Docker exec through project docker container
+alias dexec="./dock/bin/container-exec"
